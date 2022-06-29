@@ -32,6 +32,10 @@ This project is a simple hospital management system. In this project, you can ad
 ![7](https://user-images.githubusercontent.com/53381756/176538489-a3ebb2f1-926d-4fa6-8c7d-61f0ba16d1b3.png)
 
 
+## About the project
+
+I tried to do this by giving about 2 days for this project.
+
 ## License
 
 MIT
