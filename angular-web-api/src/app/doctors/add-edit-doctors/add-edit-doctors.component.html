@@ -1,0 +1,25 @@
+<form>
+    <div class="mb-3">
+      <label for="doc_first_name" class="form-label">First Name</label>
+      <input type="text" class="form-control" [(ngModel)]="doc_first_name" name="doc_first_name">
+    </div>
+    <div class="mb-3">
+        <label for="doc_last_name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" [(ngModel)]="doc_last_name" name="doc_last_name">
+      </div>
+      <div class="mb-3">
+        <label for="doc_ph_no" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" [(ngModel)]="doc_ph_no" name="doc_ph_no">
+      </div>
+      <div class="mb-3">
+        <label for="doc_address" class="form-label">Address</label>
+        <input type="text" class="form-control" [(ngModel)]="doc_address" name="doc_address">
+      </div>
+    <button (click)="addDoctor()" *ngIf="doctors.id==0" class="btn btn-primary">
+      Add
+    </button>
+    <button (click)="updateDoctor()" *ngIf="doctors.id!=0" class="btn btn-primary">
+      Update
+    </button>
+  </form>
+

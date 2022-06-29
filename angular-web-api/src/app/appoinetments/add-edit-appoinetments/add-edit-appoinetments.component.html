@@ -1,0 +1,26 @@
+<form>
+    <div class="mb-3">
+      <label for="doc_name" class="form-label">Doctor Name</label>
+      <input type="text" class="form-control" name="doc_name" [(ngModel)]="doc_name" *ngIf="appointments.id!=0" disabled>
+      <select class="form-control" name="doc_name" id="doc_name" [(ngModel)]="doc_name" *ngIf="appointments.id==0">
+        <option *ngFor="let type of AppointmentDoctorList$|async" [value]="type.doc_first_name">{{type.doc_first_name}}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="pat_name" class="form-label">Patient Name</label>
+      <input type="text" class="form-control" name="pat_name" [(ngModel)]="pat_name" *ngIf="appointments.id!=0" disabled>
+      <select class="form-control" name="pat_name" id="pat_name" [(ngModel)]="pat_name" *ngIf="appointments.id==0">
+        <option *ngFor="let type of AppointmentPatientList$|async" [value]="type.pat_first_name">{{type.pat_first_name}}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="appointment_date" class="form-label">Appointment Date</label>
+      <input type="date" class="form-control" [(ngModel)]="appointment_date" name="appointment_date">
+    </div>
+    <button (click)="addAppointment()" *ngIf="appointments.id==0" class="btn btn-primary">
+      Add
+    </button>
+    <button (click)="updateAppointment()" *ngIf="appointments.id!=0" class="btn btn-primary">
+      Update
+    </button>
+  </form>

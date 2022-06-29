@@ -1,0 +1,28 @@
+<form>
+    <div class="mb-3">
+      <label for="pat_first_name" class="form-label">First Name</label>
+      <input type="text" class="form-control" [(ngModel)]="pat_first_name" name="pat_first_name">
+    </div>
+    <div class="mb-3">
+        <label for="pat_last_name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" [(ngModel)]="pat_last_name" name="pat_last_name">
+      </div>
+      <div class="mb-3">
+        <label for="pat_insurance_no" class="form-label">İnsurance No</label>
+        <input type="text" class="form-control" [(ngModel)]="pat_insurance_no" name="pat_insurance_no">
+      </div>
+      <div class="mb-3">
+        <label for="pat_ph_no" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" [(ngModel)]="pat_ph_no" name="pat_ph_no">
+      </div>
+      <div class="mb-3">
+        <label for="pat_address" class="form-label">Address</label>
+        <input type="text" class="form-control" [(ngModel)]="pat_address" name="pat_address">
+      </div>
+    <button (click)="addPatient()" *ngIf="patients.id==0" class="btn btn-primary">
+      Add
+    </button>
+    <button (click)="updatePatient()" *ngIf="patients.id!=0" class="btn btn-primary">
+      Update
+    </button>
+  </form>
